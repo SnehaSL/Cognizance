@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Todo List 2022 with LocalStorage</title>
+	<!-- CSS Import -->
+	<link rel="stylesheet" href="main.css" />
+	<!-- End of CSS Import -->
+	<!-- Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,700;0,900;1,400&family=Montserrat:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+	<!-- End of Fonts -->
+</head>
+<body>
+    <img src="dreamwithsnehalogo.png"
+    style="display: block;  margin-left: auto;margin-right: auto; width: 20%; border-radius: 50%" >
+	<!-- App Wrapper -->
+	<main class="app">
+		<!-- Greeting -->
+		<section class="greeting">
+			<h2 class="title">
+				HELLO, <input type="text" id="name"  />
+			</h2>
+		</section>
+		<!-- End of Greeting -->
+		
+		<!-- New Todo -->
+		<section class="create-todo">
+            
+			<h3>PLAN YOUR DAY, <em>FOLLOW UP YOUR DREAMS</em></h3>
+			<form id="new-todo-form">
+				<h3>What's your plan for today?</h3>
+				<input 
+					type="text" 
+					placeholder="e.g. complete H.W"
+					name="content"
+					id="content" />-->
+				
+				<h3>Choose task category:</h3>
+				<div class="options">
+					<label>
+						<input type="radio" name="category" id="category1" value="Important" /> 
+						<span class="bubble Important"></span>
+						<div>Important</div>
+					</label>
+					<label>
+						<input type="radio" name="category" id="category2" value="personal" />
+						<span class="bubble personal"></span>
+						<div>Personal</div>
+					</label>
+				</div>
+				<h3>Write description:</h3>
+				<div class="descriptions">
+					<label>
+						<input type="text" name="description" id="description" placeholder="description"/>
+						
+					</label>
+				</div>
+				<h3>choose deadline:</h3>
+					<div class="deadline">
+						<label>
+							<input type="text" id="deadline" placeholder="deadline"/>
+						</label>
+					</div>
+
+				<div>
+					<input type="submit" value="Add todo" />
+				</div>
+				<!--<h3> View options </h3>
+				    <div class="select">
+						<select name="todos" class="filter-todo">
+							<option value="all"> ALL </option>
+							<option value="completed"> completed </option>
+						    <option value="pending"> Pending </option>
+						</select>
+					</div>-->
+
+					<form action="">
+						<button class="todo-button" type="submit">
+							<i class="fas fa-plus-circle fa-lg"></i>
+						</button>
+						<div class="select">
+							<select name="todos" class="filter-todo">
+								<option value="all">All</option>
+								<option value="completed">Completed</option>
+								<option value="incomplete">Incomplete</option>
+							</select>
+						</div>
+					</form>
+
+			
+
+
+				
+			</form>
+		</section>
+		<!-- End of New Todo -->
+
+		<!-- Todo List -->
+		<section class="todo-list">
+			<h3>TODO LIST</h3>
+			<div class="list" id="todo-list"></div>
+		</section>
+		<!-- End of Todo List -->
+
+	</main>
+	<!-- End of App Wrapper -->
+
+	<!-- JS Import -->
+	<script src="main.js"></script>
+	<!-- End of JS Import -->
+</body>
+</html>
